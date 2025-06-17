@@ -20,6 +20,12 @@ if (preg_match('#^/api/product/([0-9]+)$#', $request, $matches)) {
         case '/api/delete-product':
             require_once '../src/delete_product.php';
             break;
+        case '/api/login':
+            require_once '../src/login.php';
+            break;
+        case '/api/register':
+            require_once '../src/register.php';
+            break;
         default:
             http_response_code(404);
             echo json_encode(['message' => 'Endpoint tidak ditemukan']);
