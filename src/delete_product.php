@@ -1,6 +1,10 @@
 <?php
 include '../config/db.php';
+require_once '../middleware/auth.php';
+
 header('Content-Type: application/json');
+
+$decodedUser = authenticate();
 
 $id = $_POST['id'] ?? null;
 

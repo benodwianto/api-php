@@ -1,6 +1,8 @@
 <?php
 include '../config/db.php';
+require_once '../middleware/auth.php';
 
+$decodedUser = authenticate();
 $id = $_GET['id'] ?? null;
 
 if ($id) {

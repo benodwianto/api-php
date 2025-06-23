@@ -1,9 +1,10 @@
 <?php
 include '../config/db.php';
 require_once '../middleware/auth.php';
-$decodedUser = authenticate();
 
 header('Content-Type: application/json');
+
+$decodedUser = authenticate();
 
 // Pastikan direktori upload ada
 $uploadDir = '../assets/img/';

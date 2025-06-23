@@ -1,5 +1,6 @@
 <?php
 include '../config/db.php';
+
 $sql = "SELECT * FROM products";
 $statement = $pdo->prepare($sql);
 if (!$statement->execute()) {

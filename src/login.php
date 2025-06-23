@@ -1,7 +1,14 @@
 <?php
 include '../config/db.php';
 require_once '../vendor/autoload.php'; // pastikan ini sesuai
-include '../config/jwt.php';
+$config = require '../config/jwt.php';
+
+$key = $config['secret_key'];
+$issuer = $config['iss'];
+$audience = $config['aud'];
+$issuedAt = time();
+$expirationTime = $issuedAt + 3600;
+
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
